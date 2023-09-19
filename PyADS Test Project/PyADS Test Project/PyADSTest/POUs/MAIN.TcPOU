@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="MAIN" Id="{cf941a6b-9326-430a-881a-5e529de028d0}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM MAIN
+VAR
+	bOut1 : BOOL;
+	bOut2 : BOOL;
+	iNumber : INT := 50;
+	stStruct : stStruct;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[bOut1 := Globals.bBool1;
+bOut2 := Globals.bBool2;
+stStruct.bFirst := TRUE;
+stStruct.iSecond := 5;
+stStruct.rThird := 1.3;]]></ST>
+    </Implementation>
+    <LineIds Name="MAIN">
+      <LineId Id="2" Count="0" />
+      <LineId Id="8" Count="0" />
+      <LineId Id="12" Count="2" />
+    </LineIds>
+  </POU>
+</TcPlcObject>
