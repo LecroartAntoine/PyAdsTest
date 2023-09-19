@@ -1,8 +1,9 @@
 import pyads as ads
 
-AMSNETID = '10.0.2.15.1.1'
+AMSNETID = '192.168.1.35.1.1'
+IPADR = ''
 
-plc = ads.Connection(AMSNETID, ads.PORT_TC3PLC1)
+plc = ads.Connection(AMSNETID, ads.PORT_TC3PLC1, IPADR)
 plc.open()
 print(f"Connected ? : {plc.is_open}")
 print(f"Local Address ? : {plc.get_local_address()}")
